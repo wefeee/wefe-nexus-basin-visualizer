@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10234a">
+  <title>WEFE Nexus Basin Visualizer &amp; Decision Support Tool</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://server.arcgisonline.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root{color-scheme:light;--ink:#182521;--muted:#73807a;--line:#e2e8e3;--paper:#f5f7f3;--green:#24624d;--green-dark:#174b39;--mint:#e8f1eb;--amber:#dfac50;--sidebar:344px}
+    *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper)}button,select,input{font:inherit}button{cursor:pointer}
+    .app{height:100%;display:grid;grid-template-rows:70px 1fr;overflow:hidden}.topbar{display:flex;align-items:center;gap:16px;padding:0 24px;background:#172522;color:white;border-bottom:1px solid #30403a;z-index:500}.brand-mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#2c604a;color:#dff0df;font-size:19px}.brand{font-family:Georgia,serif;font-size:19px;letter-spacing:.01em}.brand small{display:block;margin-top:3px;font:10px/1.2 Inter,"Segoe UI",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#a9b9b1}.top-spacer{flex:1}.top-pill{display:flex;gap:8px;align-items:center;font-size:12px;color:#bdcbc4}.dot{width:7px;height:7px;border-radius:50%;background:#79bd8a;box-shadow:0 0 0 3px #79bd8a24}
+    .layout{min-height:0;display:grid;grid-template-columns:var(--sidebar) minmax(0,1fr)}.sidebar{z-index:400;position:relative;min-height:0;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column}.side-scroll{overflow:auto;padding:22px 18px 12px}.eyebrow{font-size:10px;font-weight:750;letter-spacing:.15em;text-transform:uppercase;color:#87928c}.section-title{margin:8px 0 14px;font:22px/1.15 Georgia,serif}.basin-label{display:block;margin:0 0 7px;font-size:11px;font-weight:700;color:#53635c}.select-wrap{position:relative}.select-wrap:after{content:"⌄";position:absolute;right:14px;top:10px;color:#62736b;pointer-events:none}.basin-select{appearance:none;width:100%;height:42px;padding:0 38px 0 12px;border:1px solid #d7dfd9;border-radius:8px;background:white;color:var(--ink);font-weight:650;outline:none}.basin-select:focus{border-color:var(--green);box-shadow:0 0 0 3px #24624d18}.folder-row{display:flex;align-items:center;gap:10px;margin-top:12px;padding:11px 12px;border-radius:9px;background:#f3f6f2}.folder-icon{font-size:17px;color:var(--green)}.folder-copy{min-width:0;flex:1}.folder-copy b{display:block;font-size:11px}.folder-copy span{display:block;margin-top:3px;color:var(--muted);font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.small-button{border:1px solid #d4ddd6;background:#fff;border-radius:7px;padding:7px 9px;color:#345747;font-size:10px;font-weight:700;white-space:nowrap}.small-button:hover{border-color:#94ac9c;background:#f8fbf8}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.privacy-note{margin:10px 2px 0;font-size:10px;line-height:1.5;color:#85918a}
+    .divider{height:1px;background:var(--line);margin:18px 0}.content-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.content-head h2{margin:0;font:18px Georgia,serif}.count{padding:4px 7px;border-radius:99px;background:#eef3ee;color:#607068;font-size:10px;font-weight:700}.search{width:100%;height:34px;border:1px solid #e0e6e1;border-radius:7px;padding:0 10px;margin-bottom:11px;font-size:11px;outline:none}.search:focus{border-color:#91ac9d}.categories{display:flex;flex-direction:column;gap:7px}.category{border:1px solid #e8ece8;border-radius:9px;background:white;overflow:hidden}.category summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 11px;font-size:11px;font-weight:700;color:#34453d}.category summary::-webkit-details-marker{display:none}.category summary:before{content:"›";font-size:17px;line-height:10px;color:#91a096;transition:transform .15s}.category[open] summary:before{transform:rotate(90deg)}.category-count{margin-left:auto;color:#8d9992;font-size:9px;font-weight:600}.layer-list{padding:0 10px 8px}.layer-row{display:flex;align-items:flex-start;gap:8px;padding:7px 1px;border-top:1px solid #f0f3f0}.layer-row input{accent-color:var(--green);margin:1px 0 0}.layer-name{font-size:10px;line-height:1.35;overflow-wrap:anywhere;cursor:pointer}.layer-meta{display:block;color:#909b95;font-size:9px;margin-top:2px}.empty{padding:14px;border:1px dashed #d6ded8;border-radius:8px;color:#7d8982;font-size:11px;line-height:1.5}.pdf-section h3{margin:0 0 9px;font:16px Georgia,serif}.pdf-links{display:flex;flex-direction:column;gap:7px}.pdf-link{display:flex;align-items:center;gap:9px;padding:10px 11px;border:1px solid #e6ebe6;border-radius:8px;color:#294c3d;text-decoration:none;font-size:10px;font-weight:650}.pdf-link:hover{background:#f2f7f3;border-color:#c6d5ca}.pdf-icon{color:#b76551;font-size:14px}.side-footer{margin-top:auto;padding:11px 18px;border-top:1px solid var(--line);font-size:9px;color:#86918a;line-height:1.45;background:#fcfdfb}
+    .map-wrap{position:relative;min-width:0;min-height:0;background:#e8ece5}.map-stage{position:absolute;inset:0}#map{width:100%;height:100%;background:#e5e9e2}.map-banner{position:absolute;z-index:500;top:18px;left:18px;pointer-events:none;max-width:min(420px,calc(100% - 36px));padding:12px 15px;border:1px solid #dfe5df;border-radius:10px;background:#fffffff2;box-shadow:0 6px 20px #17252212}.map-banner strong{display:block;font:18px Georgia,serif}.map-banner span{display:block;margin-top:4px;color:#748079;font-size:10px}.legend-panel{position:absolute;z-index:500;right:18px;bottom:20px;width:min(260px,calc(100% - 36px));max-height:48%;overflow:auto;padding:13px 14px;border:1px solid #dfe5df;border-radius:10px;background:#fffffff2;box-shadow:0 6px 20px #17252218}.legend-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}.legend-heading strong{font:16px Georgia,serif}.legend-heading span{font-size:9px;color:#7c8981}.legend-group{padding:8px 0;border-top:1px solid #edf0ed}.legend-layer{display:flex;align-items:center;gap:7px;margin-bottom:6px;font-size:10px;font-weight:700}.swatch{width:11px;height:11px;flex:none;border-radius:3px;border:1px solid #24352d33}.legend-values{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px}.legend-value{display:flex;align-items:center;gap:6px;min-width:0;color:#59675f;font-size:9px}.legend-value span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.geom-icon{width:12px;height:12px;display:inline-block;position:relative;flex:none}.geom-icon.point{width:9px;height:9px;border-radius:50%;background:var(--c);margin:0 2px}.geom-icon.line:before{content:"";position:absolute;left:0;right:0;top:5px;height:2px;background:var(--c);transform:rotate(-22deg)}.geom-icon.polygon{border-radius:2px;background:color-mix(in srgb,var(--c) 45%,white);border:1px solid var(--c)}.status-toast{position:absolute;z-index:700;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 30px);padding:10px 14px;border-radius:9px;background:#172522;color:white;font-size:11px;box-shadow:0 8px 24px #0002;opacity:0;pointer-events:none;transition:opacity .2s}.status-toast.show{opacity:1}.leaflet-control-attribution{font-size:9px!important}.leaflet-popup-content{font-size:11px;line-height:1.45}.popup-title{font-weight:700;margin-bottom:5px}.popup-table{border-collapse:collapse}.popup-table td{padding:2px 5px 2px 0;vertical-align:top}.popup-table td:first-child{color:#708078}
+    @media(max-width:800px){:root{--sidebar:300px}.topbar{padding:0 14px}.top-pill{display:none}.layout{grid-template-columns:minmax(260px,42%) minmax(0,1fr)}.side-scroll{padding:16px 13px}.side-footer{padding:9px 13px}}
+    @media(max-width:600px){.app{grid-template-rows:60px 1fr}.brand{font-size:16px}.layout{grid-template-columns:1fr;grid-template-rows:minmax(250px,43%) minmax(0,1fr)}.sidebar{grid-row:2;border-right:0;border-top:1px solid var(--line)}.map-wrap{grid-row:1}.side-scroll{padding:12px}.side-footer{display:none}.map-banner{top:10px;left:10px;padding:9px 11px}.map-banner strong{font-size:15px}.legend-panel{right:10px;bottom:10px;width:200px;padding:9px 10px}}
+    :root{--ink:#152440;--muted:#6f7d91;--line:#dce4f0;--paper:#f3f6fb;--green:#1f4e97;--green-dark:#153565;--mint:#eaf0fa}
+    .topbar{background:#10234a;border-bottom-color:#2a3f68}.brand-mark{background:#264a84;color:#e9f1ff}.brand{font-size:17px}.brand small{color:#bdcce7;letter-spacing:.13em}.top-pill{color:#d0d9e9}.dot{background:#73b5e4;box-shadow:0 0 0 3px #73b5e424}
+    .folder-row{background:#eef3fb}.basin-select:focus{box-shadow:0 0 0 3px #1f4e9718}.basin-label{color:#415573}.content-head h2{color:#173361}.category{border-color:#e1e7f0}.category summary{font-size:13px;color:#20395f}.category summary:before{color:#6280ad}.category-count{font-size:10px;color:#687c9b}.layer-row{border-color:#edf1f7}.layer-name{font-size:12px;color:#273b59}.layer-meta{font-size:10px}.count{background:#e9eff9;color:#385b8c}
+    .tool-card{padding:12px;border:1px solid #dfe6f0;border-radius:10px;background:#fbfcff}.tool-card h3{margin:0 0 10px;font:16px Georgia,serif;color:#173361}.tool-title-row{display:flex;align-items:center;justify-content:space-between}.tool-title-row h3{margin-bottom:8px}.tool-label{display:block;margin:8px 0 4px;font-size:11px;font-weight:700;color:#415573}.tool-select{width:100%;height:34px;padding:0 9px;border:1px solid #d6dfed;border-radius:7px;background:#fff;color:#20314f;font-size:11px}.tool-select:focus{outline:2px solid #1f4e9730;border-color:#6c8dc3}.download-button{width:100%;margin-top:10px;padding:9px;border:0;border-radius:7px;background:#1f4e97;color:white;font-size:11px;font-weight:700}.download-button:hover:not(:disabled){background:#173d7b}.download-button:disabled{background:#aebbd0;cursor:not-allowed}.tool-hint{margin:7px 0 0;color:#74829a;font-size:10px;line-height:1.4}.order-list{display:flex;flex-direction:column;gap:5px}.order-row{display:flex;align-items:center;gap:7px;padding:6px 7px;border:1px solid #e5eaf2;border-radius:7px;background:#fff}.order-row-name{flex:1;min-width:0;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.order-row-buttons{display:flex;gap:3px}.order-row-buttons button{width:25px;height:24px;border:1px solid #dce4ef;border-radius:5px;background:#f6f8fc;color:#244777;font-weight:700}.order-row-buttons button:disabled{opacity:.35;cursor:default}.order-empty{padding:9px;border:1px dashed #d5deeb;border-radius:7px;color:#78869a;font-size:10px;line-height:1.4}
+    .pdf-link{color:#244777;border-color:#dfe6f0}.pdf-link:hover{background:#f0f5fc;border-color:#b7c8e3}.map-wrap{background:#e9eef6}.status-toast{background:#10234a}.map-banner,.legend-panel{border-color:#dbe3ef}.legend-heading strong{color:#173361}.popup-table td:first-child{color:#61728e}
+    .popup-attributes{min-width:180px}.popup-attribute{display:flex;justify-content:space-between;gap:16px;padding:5px 0;border-top:1px solid #e8edf5;font-size:11px}.popup-attribute span{color:#61728e}.popup-attribute b{max-width:180px;text-align:right;font-weight:650;overflow-wrap:anywhere;color:#1d3153}
+    @media(max-width:600px){.brand{font-size:14px}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">⌖</div>
+      <div class="brand">WEFE Nexus Basin Visualizer &amp; Decision Support Tool<small>CNRS-L · Basin data explorer</small></div>
+      <div class="top-spacer"></div>
+      <div class="top-pill"><span class="dot"></span><span id="topStatus">Loading basin data</span></div>
+    </header>
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="side-scroll">
+          <div class="eyebrow">Explore the watershed</div>
+          <h1 class="section-title">Basin workspace</h1>
+          <label class="basin-label" for="basinSelect">Selected basin</label>
+          <div class="select-wrap"><select class="basin-select" id="basinSelect" disabled><option value="">Loading basins…</option></select></div>
+          <div class="folder-row">
+            <span class="folder-icon" aria-hidden="true">▱</span>
+            <div class="folder-copy"><b id="folderTitle">Loading basin data…</b><span id="folderSub">Preparing the layer list</span></div>
+            <span class="count" id="coverageBadge">—</span>
+          </div>
+          <p class="privacy-note">Choose a basin to see its categories. Layer files load only when switched on.</p>
+          <div class="divider"></div>
+          <div class="content-head"><h2>Contents</h2><span class="count" id="layerCount">0 layers</span></div>
+          <input class="search" id="layerSearch" type="search" placeholder="Filter layers…" aria-label="Filter layers" disabled>
+          <div class="categories" id="categories"><div class="empty">Loading basin categories…</div></div>
+          <div class="divider"></div>
+          <section class="tool-card" aria-labelledby="exportHeading">
+            <h3 id="exportHeading">Export a shapefile</h3>
+            <label class="tool-label" for="exportBasin">Basin</label>
+            <select class="tool-select" id="exportBasin" disabled><option value="">Choose a basin</option></select>
+            <label class="tool-label" for="exportCategory">Category</label>
+            <select class="tool-select" id="exportCategory" disabled><option value="">Choose a category</option></select>
+            <label class="tool-label" for="exportLayer">Shapefile</label>
+            <select class="tool-select" id="exportLayer" disabled><option value="">Choose a shapefile</option></select>
+            <button class="download-button" id="exportButton" disabled>Download shapefile ZIP</button>
+            <p class="tool-hint">Includes the selected layer’s shapefile parts.</p>
+          </section>
+          <div class="divider"></div>
+          <section class="tool-card" aria-labelledby="orderHeading">
+            <div class="tool-title-row"><h3 id="orderHeading">Map layer order</h3><span class="count" id="orderCount">0</span></div>
+            <div class="order-list" id="layerOrderList"><div class="empty">Turn on layers to arrange their drawing order.</div></div>
+            <p class="tool-hint">Layers higher in this list draw above layers below.</p>
+          </section>
+          <div class="divider"></div>
+          <section class="pdf-section" aria-labelledby="pdfHeading"><h3 id="pdfHeading">Intervention maps</h3><div class="pdf-links" id="pdfLinks"><div class="empty">PDF maps will appear here when a basin is selected.</div></div></section>
+        </div>
+        <footer class="side-footer">Map data is reprojected from WGS 84 / UTM zone 36N for display. Base map © Esri and its data providers.</footer>
+      </aside>
+      <section class="map-wrap" aria-label="Interactive map">
+        <div class="map-stage"><div id="map"></div></div>
+        <div class="map-banner"><strong id="mapTitle">Lebanon watersheds</strong><span id="mapSubtitle">Turn on a layer to inspect the basin and its attributes</span></div>
+        <div class="legend-panel" id="legendPanel"><div class="legend-heading"><strong>Visible layers</strong><span id="legendCount">0 on</span></div><div id="legendContent" class="empty">Turn on a layer to build the legend.</div></div>
+        <div class="status-toast" id="toast" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/shpjs@5.0.2/dist/shp.min.js"></script>
+  <script>
+    (() => {
+      const COLORS = ['#3d8069','#d49a37','#5d83a8','#b96850','#896da3','#6a9b42','#c17d9c','#478a99','#bb7043','#777b43','#5f6fb2','#a9874f','#4d8b60','#a25d72','#668caa','#9b773e','#53877f','#8b6d9d','#b28e3d','#71845c'];
+      const TYPE_COLORS = {Point:'#bc7541',LineString:'#477eaa',Polygon:'#39836b',MultiPoint:'#bc7541',MultiLineString:'#477eaa',MultiPolygon:'#39836b'};
+      const SPECIAL_FIELDS = ['Ranges','L1_descr','Descrip'];
+      const state = {manifest:null,selected:'',layers:new Map(),drawOrder:[],toastTimer:null};
+      const $ = id => document.getElementById(id);
+      const map = L.map('map',{zoomControl:true,preferCanvas:true}).setView([33.85,35.85],8);
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri &mdash; Sources: Esri, Garmin, FAO, NOAA, USGS, and the GIS User Community'}).addTo(map);
+      const visibleLayerGroup = L.featureGroup().addTo(map);
+
+      $('basinSelect').addEventListener('change',e=>selectBasin(e.target.value));
+      $('layerSearch').addEventListener('input',renderCategories);
+      $('exportBasin').addEventListener('change',updateExportCategories);
+      $('exportCategory').addEventListener('change',updateExportLayers);
+      $('exportLayer').addEventListener('change',updateExportButton);
+      $('exportButton').addEventListener('click',downloadSelectedLayer);
+      window.addEventListener('resize',()=>map.invalidateSize());
+      loadManifest();
+
+      async function loadManifest(){
+        try{
+          const response=await fetch(new URL('data/manifest.json',document.baseURI));
+          if(!response.ok)throw new Error(`The data manifest returned HTTP ${response.status}.`);
+          state.manifest=await response.json();
+          const basins=state.manifest.basins||[];
+          const layerCount=basins.reduce((sum,basin)=>sum+(basin.categories||[]).reduce((n,category)=>n+(category.layers||[]).length,0),0);
+          $('basinSelect').innerHTML='<option value="">Select a basin…</option>'+basins.map(b=>`<option value="${escapeAttr(b.id)}">${escapeHtml(pretty(b.name))}</option>`).join('');
+          $('basinSelect').disabled=false;
+          $('exportBasin').innerHTML='<option value="">Choose a basin</option>'+basins.map(b=>`<option value="${escapeAttr(b.id)}">${escapeHtml(pretty(b.name))}</option>`).join('');
+          $('exportBasin').disabled=false;
+          $('layerSearch').disabled=false;
+          $('folderTitle').textContent=`${basins.length} basins ready`;
+          $('folderSub').textContent=`${layerCount} layers and ${basins.reduce((n,b)=>n+(b.pdfs||[]).length,0)} PDFs available`;
+          $('coverageBadge').textContent=`${basins.length} basins`;
+          $('topStatus').textContent='All basin data ready';
+          $('categories').innerHTML='<div class="empty">Choose a basin to list its layer categories.</div>';
+        }catch(error){
+          $('folderTitle').textContent='Could not load basin data';
+          $('folderSub').textContent=error.message||String(error);
+          $('topStatus').textContent='Data manifest unavailable';
+          $('categories').innerHTML='<div class="empty">Open this page through the Jupyter server or GitHub Pages so it can load <code>data/manifest.json</code>.</div>';
+          toast(error.message||String(error));
+        }
+      }
+
+      function updateExportCategories(){
+        const basin=(state.manifest?.basins||[]).find(item=>item.id===$('exportBasin').value);
+        const categories=basin?.categories||[];
+        $('exportCategory').innerHTML='<option value="">Choose a category</option>'+categories.map(category=>`<option value="${escapeAttr(category.id)}">${escapeHtml(displayCategory(category.name))}</option>`).join('');
+        $('exportCategory').disabled=!categories.length;
+        $('exportLayer').innerHTML='<option value="">Choose a shapefile</option>';
+        $('exportLayer').disabled=true;
+        $('exportButton').disabled=true;
+      }
+      function updateExportLayers(){
+        const basin=(state.manifest?.basins||[]).find(item=>item.id===$('exportBasin').value);
+        const category=(basin?.categories||[]).find(item=>item.id===$('exportCategory').value);
+        const layers=category?.layers||[];
+        $('exportLayer').innerHTML='<option value="">Choose a shapefile</option>'+layers.map(layer=>`<option value="${escapeAttr(layer.url)}">${escapeHtml(pretty(layer.name))}</option>`).join('');
+        $('exportLayer').disabled=!layers.length;
+        $('exportButton').disabled=true;
+      }
+      function updateExportButton(){$('exportButton').disabled=!$('exportLayer').value;}
+      function downloadSelectedLayer(){
+        const basin=$('exportBasin').value,category=$('exportCategory').value,layerUrl=$('exportLayer').value;
+        if(!basin||!category||!layerUrl)return;
+        const link=document.createElement('a');
+        link.href=new URL(layerUrl,document.baseURI).href;
+        link.download=`${basin}_${category}_${$('exportLayer').selectedOptions[0].text.replace(/\\s+/g,'_')}.zip`;
+        document.body.appendChild(link);link.click();link.remove();
+      }
+
+      function selectBasin(basin){
+        state.selected=basin;
+        state.layers.clear();
+        state.drawOrder=[];
+        visibleLayerGroup.clearLayers();
+        if(!basin){renderCategories();renderPdfs();updateLegend();renderLayerOrder();return;}
+        const basinData=(state.manifest?.basins||[]).find(item=>item.id===basin);
+        const items=(basinData?.categories||[]).flatMap(category=>(category.layers||[]).map(layer=>({...layer,category:category.id})));
+        for(const item of items){
+          const id=keyFor(item.url);
+          state.layers.set(id,{...item,id,name:pretty(item.name),geojson:null,leafletLayer:null,loading:false,visible:false,styleInfo:null,error:null});
+        }
+        $('mapTitle').textContent=pretty(basinData?.name||basin);
+        $('mapSubtitle').textContent=`${items.length} shapefiles · select layers in Contents to display`;
+        $('topStatus').textContent=`${pretty(basin)} selected`;
+        renderCategories();renderPdfs();updateLegend();renderLayerOrder();
+      }
+
+      function renderCategories(){
+        const items=[...state.layers.values()];
+        const query=$('layerSearch').value.trim().toLowerCase();
+        const filtered=items.filter(x=>!query||x.name.toLowerCase().includes(query)||displayCategory(x.category).toLowerCase().includes(query));
+        $('layerCount').textContent=`${filtered.length} layer${filtered.length===1?'':'s'}`;
+        if(!state.selected){$('categories').innerHTML='<div class="empty">Choose a basin to list its layer categories.</div>';return;}
+        if(!filtered.length){$('categories').innerHTML='<div class="empty">No layers match this filter.</div>';return;}
+        const groups=new Map();
+        for(const item of filtered){if(!groups.has(item.category))groups.set(item.category,[]);groups.get(item.category).push(item);}
+        $('categories').innerHTML=[...groups].map(([category,layers])=>`<details class="category" open><summary><span>${escapeHtml(displayCategory(category))}</span><span class="category-count">${layers.length}</span></summary><div class="layer-list">${layers.map(layer=>`<label class="layer-row"><input type="checkbox" data-layer="${escapeAttr(layer.id)}" ${layer.visible?'checked':''} ${layer.loading?'disabled':''}><span class="layer-name">${escapeHtml(layer.name)}<span class="layer-meta">${layer.loading?'Loading…':layer.error?'Could not load':layer.geojson?`${layer.geojson.features?.length??0} features`:'Shapefile'}</span></span></label>`).join('')}</div></details>`).join('');
+        $('categories').querySelectorAll('input[data-layer]').forEach(input=>input.addEventListener('change',()=>toggleLayer(input.dataset.layer,input.checked)));
+      }
+
+      function applyLayerOrder(){
+        for(const id of state.drawOrder){
+          const group=state.layers.get(id)?.leafletLayer;
+          if(group)group.eachLayer(featureLayer=>featureLayer.bringToFront?.());
+        }
+      }
+      function renderLayerOrder(){
+        const active=state.drawOrder.map(id=>state.layers.get(id)).filter(layer=>layer?.visible);
+        $('orderCount').textContent=String(active.length);
+        if(!active.length){$('layerOrderList').innerHTML='<div class="order-empty">Turn on layers to arrange their drawing order.</div>';return;}
+        $('layerOrderList').innerHTML=active.slice().reverse().map((layer,index)=>`<div class="order-row"><span class="order-row-name" title="${escapeAttr(layer.name)}">${escapeHtml(layer.name)}</span><span class="order-row-buttons"><button type="button" data-order="${escapeAttr(layer.id)}" data-direction="1" title="Move layer up" aria-label="Move ${escapeAttr(layer.name)} up" ${index===0?'disabled':''}>↑</button><button type="button" data-order="${escapeAttr(layer.id)}" data-direction="-1" title="Move layer down" aria-label="Move ${escapeAttr(layer.name)} down" ${index===active.length-1?'disabled':''}>↓</button></span></div>`).join('');
+        $('layerOrderList').querySelectorAll('button[data-order]').forEach(button=>button.addEventListener('click',()=>moveLayer(button.dataset.order,Number(button.dataset.direction))));
+      }
+      function moveLayer(id,direction){
+        const index=state.drawOrder.indexOf(id),target=index+direction;
+        if(index<0||target<0||target>=state.drawOrder.length)return;
+        [state.drawOrder[index],state.drawOrder[target]]=[state.drawOrder[target],state.drawOrder[index]];
+        applyLayerOrder();renderLayerOrder();
+      }
+
+      async function toggleLayer(id,show){
+        const layer=state.layers.get(id);if(!layer)return;
+        if(show){
+          if(layer.error){toast(layer.error);renderCategories();return;}
+          if(!layer.geojson){
+            layer.loading=true;renderCategories();$('topStatus').textContent=`Loading ${layer.name}…`;
+            try{layer.geojson=await readLayer(layer);}catch(error){layer.error=`${layer.name} could not be loaded: ${error.message||error}`;layer.loading=false;$('topStatus').textContent='Layer load failed';toast(layer.error);renderCategories();return;}
+            layer.loading=false;
+          }
+          layer.styleInfo=makeStyleInfo(layer.geojson);
+          layer.leafletLayer=L.geoJSON(layer.geojson,{style:feature=>featureStyle(layer,feature),pointToLayer:(feature,latlng)=>pointStyle(layer,feature,latlng),onEachFeature:(feature,featureLayer)=>featureLayer.bindPopup(makePopup(layer,feature),{maxWidth:360})});
+          layer.visible=true;visibleLayerGroup.addLayer(layer.leafletLayer);
+          if(!state.drawOrder.includes(id))state.drawOrder.push(id);
+          applyLayerOrder();
+          const bounds=layer.leafletLayer.getBounds?.();if(bounds?.isValid())map.fitBounds(bounds.pad(.08),{maxZoom:13});
+        }else{
+          layer.visible=false;if(layer.leafletLayer)visibleLayerGroup.removeLayer(layer.leafletLayer);
+          state.drawOrder=state.drawOrder.filter(layerId=>layerId!==id);
+        }
+        $('topStatus').textContent=`${pretty(state.selected)} selected`;renderCategories();updateLegend();renderLayerOrder();
+      }
+
+      async function readLayer(layer){
+        if(typeof window.shp!=='function')throw new Error('The shapefile reader did not load. Check your internet connection and reload the page.');
+        const response=await fetch(new URL(layer.url,document.baseURI));
+        if(!response.ok)throw new Error(`Layer download returned HTTP ${response.status}.`);
+        const result=await window.shp(await response.arrayBuffer());
+        const collection=Array.isArray(result)?result[0]:result;
+        if(!collection||collection.type!=='FeatureCollection')throw new Error('No features were returned from this shapefile.');
+        return collection;
+      }
+
+      function makeStyleInfo(geojson){
+        const first=geojson.features?.find(f=>f.geometry)?.geometry?.type||'Polygon';
+        const props=geojson.features?.find(f=>f.properties)?.properties||{};
+        const propertyKeys=Object.keys(props);const lower=new Map(propertyKeys.map(k=>[k.toLowerCase(),k]));
+        const special=SPECIAL_FIELDS.map(k=>lower.get(k.toLowerCase())).find(Boolean)||null;
+        const color=TYPE_COLORS[first]||'#52816e';
+        const values=special?[...new Set(geojson.features.map(f=>f.properties?.[special]).filter(v=>v!==null&&v!==undefined&&String(v).trim()!==''))].sort((a,b)=>String(a).localeCompare(String(b),undefined,{numeric:true,sensitivity:'base'})):[];
+        const colors=new Map(values.map((value,index)=>[String(value),COLORS[index%COLORS.length]]));
+        return {geometry:first,field:special,values,colors,color};
+      }
+      function featureStyle(layer,feature){
+        const info=layer.styleInfo||{};const value=info.field?feature.properties?.[info.field]:null;const color=value==null?info.color:info.colors.get(String(value))||info.color;
+        return {color,weight:info.geometry?.includes('Line')?2:1,opacity:.95,fillColor:color,fillOpacity:info.geometry?.includes('Polygon') ? .62 : .28};
+      }
+      function pointStyle(layer,feature,latlng){const color=featureStyle(layer,feature).color;return L.circleMarker(latlng,{radius:5,color:'#fff',weight:1.2,fillColor:color,fillOpacity:.95});}
+      function makePopup(layer,feature){
+        const props=feature.properties||{};
+        const keys=Object.keys(props);
+        const byLower=new Map(keys.map(key=>[key.toLowerCase(),key]));
+        const areaKm2=byLower.get('area_km2')||byLower.get('ws_areakm2')||byLower.get('ws_area_km2');
+        const areaM2=byLower.get('area_m2')||byLower.get('ws_area_m2');
+        let areaText='';
+        if(areaKm2&&Number.isFinite(Number(props[areaKm2])))areaText=`${formatNumber(props[areaKm2])} km²`;
+        else if(areaM2&&Number.isFinite(Number(props[areaM2])))areaText=`${formatNumber(Number(props[areaM2])/1000000)} km²`;
+        const chosen=[];const used=new Set([areaKm2,areaM2].filter(Boolean));
+        const preferred=[layer.styleInfo?.field,'Name','L1_descr','Ranges','Descrip','Texture','Class','Type','Status','Category','LandUse','Land_Use'].filter(Boolean);
+        for(const wanted of preferred){
+          const key=byLower.get(wanted.toLowerCase());
+          if(!key||used.has(key)||props[key]===null||props[key]===undefined||String(props[key]).trim()===''||/^(fid|objectid|oid|shape_)/i.test(key))continue;
+          chosen.push([key,props[key]]);used.add(key);if(chosen.length>=4)break;
+        }
+        if(!chosen.length){
+          for(const key of keys){
+            if(used.has(key)||props[key]===null||props[key]===undefined||String(props[key]).trim()===''||/^(fid|objectid|oid|shape_|for_map)/i.test(key))continue;
+            chosen.push([key,props[key]]);if(chosen.length>=3)break;
+          }
+        }
+        const rows=(areaText?`<div class="popup-attribute"><span>Area</span><b>${escapeHtml(areaText)}</b></div>`:'')+chosen.map(([key,value])=>`<div class="popup-attribute"><span>${escapeHtml(key)}</span><b>${escapeHtml(formatPopupValue(value))}</b></div>`).join('');
+        return `<div class="popup-title">${escapeHtml(layer.name)}</div><div class="popup-attributes">${rows||'<div class="popup-attribute"><span>No key attributes available</span></div>'}</div>`;
+      }
+      function formatNumber(value){return new Intl.NumberFormat(undefined,{maximumFractionDigits:3}).format(Number(value));}
+      function formatPopupValue(value){if(typeof value==='number')return formatNumber(value);const text=String(value);return text.length>90?`${text.slice(0,87)}…`:text;}
+
+      function updateLegend(){
+        const active=[...state.layers.values()].filter(layer=>layer.visible&&layer.styleInfo);
+        $('legendCount').textContent=`${active.length} on`;
+        if(!active.length){$('legendContent').className='empty';$('legendContent').textContent='Turn on a layer to build the legend.';return;}
+        $('legendContent').className='';
+        $('legendContent').innerHTML=active.map(layer=>{
+          const info=layer.styleInfo;const field=info.field;
+          const entries=field?info.values.map(value=>`<div class="legend-value"><span class="swatch" style="background:${info.colors.get(String(value))}"></span><span title="${escapeAttr(String(value))}">${escapeHtml(String(value))}</span></div>`).join(''):`<div class="legend-value"><i class="geom-icon ${geometryClass(info.geometry)}" style="--c:${info.color}"></i><span>${escapeHtml(geometryLabel(info.geometry))}</span></div>`;
+          return `<div class="legend-group"><div class="legend-layer"><span class="swatch" style="background:${info.color}"></span><span>${escapeHtml(layer.name)}${field?` · ${escapeHtml(field)}`:''}</span></div><div class="legend-values">${entries}</div></div>`;
+        }).join('');
+      }
+
+      function renderPdfs(){
+        const basinData=(state.manifest?.basins||[]).find(item=>item.id===state.selected);
+        if(!basinData){$('pdfLinks').innerHTML='<div class="empty">PDF maps will appear here when a basin is selected.</div>';return;}
+        const matches=basinData.pdfs||[];
+        if(!matches.length){$('pdfLinks').innerHTML='<div class="empty">No intervention PDFs found in this basin folder.</div>';return;}
+        $('pdfLinks').innerHTML=matches.map(pdf=>{const url=new URL(pdf.url,document.baseURI).href;return `<a class="pdf-link" href="${escapeAttr(url)}" target="_blank" rel="noopener"><span class="pdf-icon">▤</span><span>${escapeHtml(pretty(pdf.name))}</span><span aria-hidden="true" style="margin-left:auto">↗</span></a>`;}).join('');
+      }
+
+      function displayCategory(value){const key=value.toLowerCase().replaceAll('_','');if(['accesibilitty','accessibilitty','accessibility'].includes(key))return 'Accessibility';return pretty(value);}
+      function pretty(value){return String(value||'').replace(/\.shp$/i,'').replace(/_/g,' ').replace(/\s+/g,' ').trim().replace(/\b([a-z])/g,c=>c.toUpperCase());}
+      function keyFor(value){return value.toLowerCase();}
+      function geometryClass(type){return type?.includes('Point')?'point':type?.includes('Line')?'line':'polygon';}
+      function geometryLabel(type){return type?.includes('Point')?'Point features':type?.includes('Line')?'Line features':'Polygon features';}
+      function displayValue(value){if(value===null||value===undefined)return '—';if(typeof value==='object')return JSON.stringify(value);return String(value);}
+      function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+      function escapeAttr(value){return escapeHtml(value);}
+      function toast(message){const node=$('toast');node.textContent=message;node.classList.add('show');clearTimeout(state.toastTimer);state.toastTimer=setTimeout(()=>node.classList.remove('show'),3800);}
+    })();
+  </script>
+</body>
+</html>

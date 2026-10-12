@@ -1,0 +1,1548 @@
+{
+  "basins": [
+    {
+      "id": "Abou_Ali",
+      "name": "Abou_Ali",
+      "categories": [
+        {
+          "id": "Accessibility",
+          "name": "Accessibility",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Accessibility",
+              "name": "Roads",
+              "file": "Roads.zip",
+              "url": "data/Abou_Ali/Accessibility/Roads.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecology",
+          "name": "Ecology",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Ecology",
+              "name": "Ecological_Sensitivity_Index",
+              "file": "Ecological_Sensitivity_Index.zip",
+              "url": "data/Abou_Ali/Ecology/Ecological_Sensitivity_Index.zip"
+            }
+          ]
+        },
+        {
+          "id": "Hydrology",
+          "name": "Hydrology",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Hydrology",
+              "name": "AbouAli_Basin",
+              "file": "AbouAli_Basin.zip",
+              "url": "data/Abou_Ali/Hydrology/AbouAli_Basin.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Hydrology",
+              "name": "River",
+              "file": "River.zip",
+              "url": "data/Abou_Ali/Hydrology/River.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Hydrology",
+              "name": "Springs",
+              "file": "Springs.zip",
+              "url": "data/Abou_Ali/Hydrology/Springs.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Hydrology",
+              "name": "Streams",
+              "file": "Streams.zip",
+              "url": "data/Abou_Ali/Hydrology/Streams.zip"
+            }
+          ]
+        },
+        {
+          "id": "Infrastructure",
+          "name": "Infrastructure",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Hill_Lakes_merged",
+              "file": "Hill_Lakes_merged.zip",
+              "url": "data/Abou_Ali/Infrastructure/Hill_Lakes_merged.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Inter-Basin_Water_Transfer_Systems",
+              "file": "Inter-Basin_Water_Transfer_Systems.zip",
+              "url": "data/Abou_Ali/Infrastructure/Inter-Basin_Water_Transfer_Systems.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Planned_hydropower",
+              "file": "Planned_hydropower.zip",
+              "url": "data/Abou_Ali/Infrastructure/Planned_hydropower.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Proposed_agriphotovoltaic",
+              "file": "Proposed_agriphotovoltaic.zip",
+              "url": "data/Abou_Ali/Infrastructure/Proposed_agriphotovoltaic.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Proposed_solar_photovoltaic",
+              "file": "Proposed_solar_photovoltaic.zip",
+              "url": "data/Abou_Ali/Infrastructure/Proposed_solar_photovoltaic.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Rooftop_harvesting",
+              "file": "Rooftop_harvesting.zip",
+              "url": "data/Abou_Ali/Infrastructure/Rooftop_harvesting.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Wind_farm",
+              "file": "Wind_farm.zip",
+              "url": "data/Abou_Ali/Infrastructure/Wind_farm.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "Working_hydropower",
+              "file": "Working_hydropower.zip",
+              "url": "data/Abou_Ali/Infrastructure/Working_hydropower.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "WWTP_Operational",
+              "file": "WWTP_Operational.zip",
+              "url": "data/Abou_Ali/Infrastructure/WWTP_Operational.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "WWTP_planned",
+              "file": "WWTP_planned.zip",
+              "url": "data/Abou_Ali/Infrastructure/WWTP_planned.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Infrastructure",
+              "name": "WWTP_rehabitation",
+              "file": "WWTP_rehabitation.zip",
+              "url": "data/Abou_Ali/Infrastructure/WWTP_rehabitation.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Capability",
+          "name": "Land_Capability",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Land_Capability",
+              "name": "Land_Capability",
+              "file": "Land_Capability.zip",
+              "url": "data/Abou_Ali/Land_Capability/Land_Capability.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Cover_Land_Use",
+          "name": "Land_Cover_Land_Use",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Land_Cover_Land_Use",
+              "name": "LUC_2023",
+              "file": "LUC_2023.zip",
+              "url": "data/Abou_Ali/Land_Cover_Land_Use/LUC_2023.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Suitability",
+          "name": "Land_Suitability",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Crops_Land_Suitability",
+              "file": "Irrigated_Crops_Land_Suitability.zip",
+              "url": "data/Abou_Ali/Land_Suitability/Irrigated_Crops_Land_Suitability.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Trees_Land_Suitability",
+              "file": "Irrigated_Trees_Land_Suitability.zip",
+              "url": "data/Abou_Ali/Land_Suitability/Irrigated_Trees_Land_Suitability.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Annual_Crops",
+              "file": "Rainfed_Annual_Crops.zip",
+              "url": "data/Abou_Ali/Land_Suitability/Rainfed_Annual_Crops.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Perennial_Trees_Land_Suitability",
+              "file": "Rainfed_Perennial_Trees_Land_Suitability.zip",
+              "url": "data/Abou_Ali/Land_Suitability/Rainfed_Perennial_Trees_Land_Suitability.zip"
+            }
+          ]
+        },
+        {
+          "id": "NBS",
+          "name": "NBS",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Agricultural_terraces_semi_circular_bunds_trenches",
+              "file": "Agricultural_terraces_semi_circular_bunds_trenches.zip",
+              "url": "data/Abou_Ali/NBS/Agricultural_terraces_semi_circular_bunds_trenches.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Depression_Ponds",
+              "file": "Depression_Ponds.zip",
+              "url": "data/Abou_Ali/NBS/Depression_Ponds.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Groundwater_Artificial_Recharge",
+              "file": "Groundwater_Artificial_Recharge.zip",
+              "url": "data/Abou_Ali/NBS/Groundwater_Artificial_Recharge.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Infiltration_Basins",
+              "file": "Infiltration_Basins.zip",
+              "url": "data/Abou_Ali/NBS/Infiltration_Basins.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Native_Reforestation_and_forest_preservation",
+              "file": "Native_Reforestation_and_forest_preservation.zip",
+              "url": "data/Abou_Ali/NBS/Native_Reforestation_and_forest_preservation.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Proposed_Check_Dams",
+              "file": "Proposed_Check_Dams.zip",
+              "url": "data/Abou_Ali/NBS/Proposed_Check_Dams.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Proposed_Protected_Area",
+              "file": "Proposed_Protected_Area.zip",
+              "url": "data/Abou_Ali/NBS/Proposed_Protected_Area.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Recharge_Pits",
+              "file": "Recharge_Pits.zip",
+              "url": "data/Abou_Ali/NBS/Recharge_Pits.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "NBS",
+              "name": "Two_Stage_River_Channel",
+              "file": "Two_Stage_River_Channel.zip",
+              "url": "data/Abou_Ali/NBS/Two_Stage_River_Channel.zip"
+            }
+          ]
+        },
+        {
+          "id": "Soil",
+          "name": "Soil",
+          "layers": [
+            {
+              "basin": "Abou_Ali",
+              "category": "Soil",
+              "name": "Soil_Erosion",
+              "file": "Soil_Erosion.zip",
+              "url": "data/Abou_Ali/Soil/Soil_Erosion.zip"
+            },
+            {
+              "basin": "Abou_Ali",
+              "category": "Soil",
+              "name": "Soil_Texture",
+              "file": "Soil_Texture.zip",
+              "url": "data/Abou_Ali/Soil/Soil_Texture.zip"
+            }
+          ]
+        }
+      ],
+      "pdfs": [
+        {
+          "basin": "Abou_Ali",
+          "name": "Map_Infrastructure_AbouAli",
+          "file": "Map_Infrastructure_AbouAli.pdf",
+          "url": "data/Abou_Ali/pdfs/Map_Infrastructure_AbouAli.pdf"
+        },
+        {
+          "basin": "Abou_Ali",
+          "name": "Map_NBS_AbouAli",
+          "file": "Map_NBS_AbouAli.pdf",
+          "url": "data/Abou_Ali/pdfs/Map_NBS_AbouAli.pdf"
+        }
+      ]
+    },
+    {
+      "id": "Beirut",
+      "name": "Beirut",
+      "categories": [
+        {
+          "id": "Accesibilitty",
+          "name": "Accesibilitty",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Accesibilitty",
+              "name": "Roads",
+              "file": "Roads.zip",
+              "url": "data/Beirut/Accesibilitty/Roads.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecology",
+          "name": "Ecology",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Ecology",
+              "name": "Ecological_Sensitivity_Index",
+              "file": "Ecological_Sensitivity_Index.zip",
+              "url": "data/Beirut/Ecology/Ecological_Sensitivity_Index.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecosystem",
+          "name": "Ecosystem",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Ecosystem",
+              "name": "Protected_Area",
+              "file": "Protected_Area.zip",
+              "url": "data/Beirut/Ecosystem/Protected_Area.zip"
+            }
+          ]
+        },
+        {
+          "id": "Hydrology",
+          "name": "Hydrology",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Hydrology",
+              "name": "Beirut_Basin",
+              "file": "Beirut_Basin.zip",
+              "url": "data/Beirut/Hydrology/Beirut_Basin.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Hydrology",
+              "name": "River",
+              "file": "River.zip",
+              "url": "data/Beirut/Hydrology/River.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Hydrology",
+              "name": "Springs",
+              "file": "Springs.zip",
+              "url": "data/Beirut/Hydrology/Springs.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Hydrology",
+              "name": "Streams",
+              "file": "Streams.zip",
+              "url": "data/Beirut/Hydrology/Streams.zip"
+            }
+          ]
+        },
+        {
+          "id": "Infrastructure",
+          "name": "Infrastructure",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Hill_Lakes",
+              "file": "Hill_Lakes.zip",
+              "url": "data/Beirut/Infrastructure/Hill_Lakes.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Planned_Hydropower",
+              "file": "Planned_Hydropower.zip",
+              "url": "data/Beirut/Infrastructure/Planned_Hydropower.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Proposed_agriphotovoltaic",
+              "file": "Proposed_agriphotovoltaic.zip",
+              "url": "data/Beirut/Infrastructure/Proposed_agriphotovoltaic.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Proposed_solar_photovoltaic",
+              "file": "Proposed_solar_photovoltaic.zip",
+              "url": "data/Beirut/Infrastructure/Proposed_solar_photovoltaic.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Proposed_WWTP",
+              "file": "Proposed_WWTP.zip",
+              "url": "data/Beirut/Infrastructure/Proposed_WWTP.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Rooftop_Harvesting",
+              "file": "Rooftop_Harvesting.zip",
+              "url": "data/Beirut/Infrastructure/Rooftop_Harvesting.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Infrastructure",
+              "name": "Wind_Farms",
+              "file": "Wind_Farms.zip",
+              "url": "data/Beirut/Infrastructure/Wind_Farms.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Capability",
+          "name": "Land_Capability",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Land_Capability",
+              "name": "Land_Capability",
+              "file": "Land_Capability.zip",
+              "url": "data/Beirut/Land_Capability/Land_Capability.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Cover_Land_Use",
+          "name": "Land_Cover_Land_Use",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Land_Cover_Land_Use",
+              "name": "LUC_2023",
+              "file": "LUC_2023.zip",
+              "url": "data/Beirut/Land_Cover_Land_Use/LUC_2023.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Suitability",
+          "name": "Land_Suitability",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Crops_Land_Suitability",
+              "file": "Irrigated_Crops_Land_Suitability.zip",
+              "url": "data/Beirut/Land_Suitability/Irrigated_Crops_Land_Suitability.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Trees_Land_Suitability",
+              "file": "Irrigated_Trees_Land_Suitability.zip",
+              "url": "data/Beirut/Land_Suitability/Irrigated_Trees_Land_Suitability.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Annual_Crops",
+              "file": "Rainfed_Annual_Crops.zip",
+              "url": "data/Beirut/Land_Suitability/Rainfed_Annual_Crops.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Perennial_Trees_Land_Suitability",
+              "file": "Rainfed_Perennial_Trees_Land_Suitability.zip",
+              "url": "data/Beirut/Land_Suitability/Rainfed_Perennial_Trees_Land_Suitability.zip"
+            }
+          ]
+        },
+        {
+          "id": "NBS",
+          "name": "NBS",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Check_Dams",
+              "file": "Check_Dams.zip",
+              "url": "data/Beirut/NBS/Check_Dams.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Depression_Ponds",
+              "file": "Depression_Ponds.zip",
+              "url": "data/Beirut/NBS/Depression_Ponds.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Groundwater_Artificial_Recharge",
+              "file": "Groundwater_Artificial_Recharge.zip",
+              "url": "data/Beirut/NBS/Groundwater_Artificial_Recharge.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Infiltration_Basins",
+              "file": "Infiltration_Basins.zip",
+              "url": "data/Beirut/NBS/Infiltration_Basins.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Proposed_ProtectedArea",
+              "file": "Proposed_ProtectedArea.zip",
+              "url": "data/Beirut/NBS/Proposed_ProtectedArea.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Recharge_Pits",
+              "file": "Recharge_Pits.zip",
+              "url": "data/Beirut/NBS/Recharge_Pits.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "NBS",
+              "name": "Two_stage_river_channel_and_establishing_a_green_buffer_corridor",
+              "file": "Two_stage_river_channel_and_establishing_a_green_buffer_corridor.zip",
+              "url": "data/Beirut/NBS/Two_stage_river_channel_and_establishing_a_green_buffer_corridor.zip"
+            }
+          ]
+        },
+        {
+          "id": "Soil",
+          "name": "Soil",
+          "layers": [
+            {
+              "basin": "Beirut",
+              "category": "Soil",
+              "name": "Soil_Erosion",
+              "file": "Soil_Erosion.zip",
+              "url": "data/Beirut/Soil/Soil_Erosion.zip"
+            },
+            {
+              "basin": "Beirut",
+              "category": "Soil",
+              "name": "Soil_Texture",
+              "file": "Soil_Texture.zip",
+              "url": "data/Beirut/Soil/Soil_Texture.zip"
+            }
+          ]
+        }
+      ],
+      "pdfs": [
+        {
+          "basin": "Beirut",
+          "name": "Map_Infrastructure_Beirut",
+          "file": "Map_Infrastructure_Beirut.pdf",
+          "url": "data/Beirut/pdfs/Map_Infrastructure_Beirut.pdf"
+        },
+        {
+          "basin": "Beirut",
+          "name": "Map_NBS_Beirut",
+          "file": "Map_NBS_Beirut.pdf",
+          "url": "data/Beirut/pdfs/Map_NBS_Beirut.pdf"
+        }
+      ]
+    },
+    {
+      "id": "Damour",
+      "name": "Damour",
+      "categories": [
+        {
+          "id": "Accesibilitty",
+          "name": "Accesibilitty",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Accesibilitty",
+              "name": "Roads",
+              "file": "Roads.zip",
+              "url": "data/Damour/Accesibilitty/Roads.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecology",
+          "name": "Ecology",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Ecology",
+              "name": "Ecological_Sensitivity_Index",
+              "file": "Ecological_Sensitivity_Index.zip",
+              "url": "data/Damour/Ecology/Ecological_Sensitivity_Index.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecosystem",
+          "name": "Ecosystem",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Ecosystem",
+              "name": "Protected_Area",
+              "file": "Protected_Area.zip",
+              "url": "data/Damour/Ecosystem/Protected_Area.zip"
+            }
+          ]
+        },
+        {
+          "id": "Hydrology",
+          "name": "Hydrology",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Hydrology",
+              "name": "Damour_Area",
+              "file": "Damour_Area.zip",
+              "url": "data/Damour/Hydrology/Damour_Area.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Hydrology",
+              "name": "River",
+              "file": "River.zip",
+              "url": "data/Damour/Hydrology/River.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Hydrology",
+              "name": "Springs",
+              "file": "Springs.zip",
+              "url": "data/Damour/Hydrology/Springs.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Hydrology",
+              "name": "Streams",
+              "file": "Streams.zip",
+              "url": "data/Damour/Hydrology/Streams.zip"
+            }
+          ]
+        },
+        {
+          "id": "Infrastructure",
+          "name": "Infrastructure",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Firefighting_water_reservoirs",
+              "file": "Firefighting_water_reservoirs.zip",
+              "url": "data/Damour/Infrastructure/Firefighting_water_reservoirs.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Hill_lakes",
+              "file": "Hill_lakes.zip",
+              "url": "data/Damour/Infrastructure/Hill_lakes.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Operational_WWTP",
+              "file": "Operational_WWTP.zip",
+              "url": "data/Damour/Infrastructure/Operational_WWTP.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Planned_hydropower",
+              "file": "Planned_hydropower.zip",
+              "url": "data/Damour/Infrastructure/Planned_hydropower.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Proposed_agriphotovoltaic",
+              "file": "Proposed_agriphotovoltaic.zip",
+              "url": "data/Damour/Infrastructure/Proposed_agriphotovoltaic.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Proposed_solar_photovoltaic",
+              "file": "Proposed_solar_photovoltaic.zip",
+              "url": "data/Damour/Infrastructure/Proposed_solar_photovoltaic.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Proposed_WWTP",
+              "file": "Proposed_WWTP.zip",
+              "url": "data/Damour/Infrastructure/Proposed_WWTP.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Rehabilitation_of_non-operational_WWTP",
+              "file": "Rehabilitation_of_non-operational_WWTP.zip",
+              "url": "data/Damour/Infrastructure/Rehabilitation_of_non-operational_WWTP.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Rooftop_Harvesting",
+              "file": "Rooftop_Harvesting.zip",
+              "url": "data/Damour/Infrastructure/Rooftop_Harvesting.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Sedimentation_traps",
+              "file": "Sedimentation_traps.zip",
+              "url": "data/Damour/Infrastructure/Sedimentation_traps.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Infrastructure",
+              "name": "Upgrade_irrigation_system",
+              "file": "Upgrade_irrigation_system.zip",
+              "url": "data/Damour/Infrastructure/Upgrade_irrigation_system.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Cover_Land_Use",
+          "name": "Land_Cover_Land_Use",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Land_Cover_Land_Use",
+              "name": "LUC_2023",
+              "file": "LUC_2023.zip",
+              "url": "data/Damour/Land_Cover_Land_Use/LUC_2023.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Suitability",
+          "name": "Land_Suitability",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Crops_Land_Suitability",
+              "file": "Irrigated_Crops_Land_Suitability.zip",
+              "url": "data/Damour/Land_Suitability/Irrigated_Crops_Land_Suitability.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Trees_Land_Suitability",
+              "file": "Irrigated_Trees_Land_Suitability.zip",
+              "url": "data/Damour/Land_Suitability/Irrigated_Trees_Land_Suitability.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Land_Suitability",
+              "name": "Land_Capability",
+              "file": "Land_Capability.zip",
+              "url": "data/Damour/Land_Suitability/Land_Capability.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Annual_Crops",
+              "file": "Rainfed_Annual_Crops.zip",
+              "url": "data/Damour/Land_Suitability/Rainfed_Annual_Crops.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Perennial_Trees_Land_Suitability",
+              "file": "Rainfed_Perennial_Trees_Land_Suitability.zip",
+              "url": "data/Damour/Land_Suitability/Rainfed_Perennial_Trees_Land_Suitability.zip"
+            }
+          ]
+        },
+        {
+          "id": "NBS",
+          "name": "NBS",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Depression_ponds",
+              "file": "Depression_ponds.zip",
+              "url": "data/Damour/NBS/Depression_ponds.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Groundwater_artificial_recharge",
+              "file": "Groundwater_artificial_recharge.zip",
+              "url": "data/Damour/NBS/Groundwater_artificial_recharge.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Infiltration_basin",
+              "file": "Infiltration_basin.zip",
+              "url": "data/Damour/NBS/Infiltration_basin.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Irrigartion_Optimisation_Salinity",
+              "file": "Irrigartion_Optimisation_Salinity.zip",
+              "url": "data/Damour/NBS/Irrigartion_Optimisation_Salinity.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "NBS_Interventions",
+              "file": "NBS_Interventions.zip",
+              "url": "data/Damour/NBS/NBS_Interventions.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Proposed_Check_Dams",
+              "file": "Proposed_Check_Dams.zip",
+              "url": "data/Damour/NBS/Proposed_Check_Dams.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Recharge_pits",
+              "file": "Recharge_pits.zip",
+              "url": "data/Damour/NBS/Recharge_pits.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Riparian_Restoration",
+              "file": "Riparian_Restoration.zip",
+              "url": "data/Damour/NBS/Riparian_Restoration.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Salinity-resistant_crops",
+              "file": "Salinity-resistant_crops.zip",
+              "url": "data/Damour/NBS/Salinity-resistant_crops.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Salinity-resistant_crops_under_protected_agriculture",
+              "file": "Salinity-resistant_crops_under_protected_agriculture.zip",
+              "url": "data/Damour/NBS/Salinity-resistant_crops_under_protected_agriculture.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "NBS",
+              "name": "Wetland",
+              "file": "Wetland.zip",
+              "url": "data/Damour/NBS/Wetland.zip"
+            }
+          ]
+        },
+        {
+          "id": "Soil",
+          "name": "Soil",
+          "layers": [
+            {
+              "basin": "Damour",
+              "category": "Soil",
+              "name": "Soil_Erosion",
+              "file": "Soil_Erosion.zip",
+              "url": "data/Damour/Soil/Soil_Erosion.zip"
+            },
+            {
+              "basin": "Damour",
+              "category": "Soil",
+              "name": "Soil_Texture",
+              "file": "Soil_Texture.zip",
+              "url": "data/Damour/Soil/Soil_Texture.zip"
+            }
+          ]
+        }
+      ],
+      "pdfs": [
+        {
+          "basin": "Damour",
+          "name": "Map_Infrastructure_Damour",
+          "file": "Map_Infrastructure_Damour.pdf",
+          "url": "data/Damour/pdfs/Map_Infrastructure_Damour.pdf"
+        },
+        {
+          "basin": "Damour",
+          "name": "Map_NBS_Damour",
+          "file": "Map_NBS_Damour.pdf",
+          "url": "data/Damour/pdfs/Map_NBS_Damour.pdf"
+        }
+      ]
+    },
+    {
+      "id": "Ibrahim",
+      "name": "Ibrahim",
+      "categories": [
+        {
+          "id": "Ecology",
+          "name": "Ecology",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Ecology",
+              "name": "Ecological_Sensitivity_Index",
+              "file": "Ecological_Sensitivity_Index.zip",
+              "url": "data/Ibrahim/Ecology/Ecological_Sensitivity_Index.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecosystem",
+          "name": "Ecosystem",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Ecosystem",
+              "name": "Protected_Area",
+              "file": "Protected_Area.zip",
+              "url": "data/Ibrahim/Ecosystem/Protected_Area.zip"
+            }
+          ]
+        },
+        {
+          "id": "Hydrology",
+          "name": "Hydrology",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Hydrology",
+              "name": "Ibrahim_Basin",
+              "file": "Ibrahim_Basin.zip",
+              "url": "data/Ibrahim/Hydrology/Ibrahim_Basin.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Hydrology",
+              "name": "River",
+              "file": "River.zip",
+              "url": "data/Ibrahim/Hydrology/River.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Hydrology",
+              "name": "springs",
+              "file": "springs.zip",
+              "url": "data/Ibrahim/Hydrology/springs.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Hydrology",
+              "name": "Streams",
+              "file": "Streams.zip",
+              "url": "data/Ibrahim/Hydrology/Streams.zip"
+            }
+          ]
+        },
+        {
+          "id": "Infrastructure",
+          "name": "Infrastructure",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Fire_fighting_water_reservoirs",
+              "file": "Fire_fighting_water_reservoirs.zip",
+              "url": "data/Ibrahim/Infrastructure/Fire_fighting_water_reservoirs.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Hill_lakes",
+              "file": "Hill_lakes.zip",
+              "url": "data/Ibrahim/Infrastructure/Hill_lakes.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Inter-basin_water_transfer_systems",
+              "file": "Inter-basin_water_transfer_systems.zip",
+              "url": "data/Ibrahim/Infrastructure/Inter-basin_water_transfer_systems.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Planned_hydropower",
+              "file": "Planned_hydropower.zip",
+              "url": "data/Ibrahim/Infrastructure/Planned_hydropower.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Proposed_agriphotovoltaic",
+              "file": "Proposed_agriphotovoltaic.zip",
+              "url": "data/Ibrahim/Infrastructure/Proposed_agriphotovoltaic.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Rooftop_harvesting",
+              "file": "Rooftop_harvesting.zip",
+              "url": "data/Ibrahim/Infrastructure/Rooftop_harvesting.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "sediment_traps",
+              "file": "sediment_traps.zip",
+              "url": "data/Ibrahim/Infrastructure/sediment_traps.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Slope_stabilisation",
+              "file": "Slope_stabilisation.zip",
+              "url": "data/Ibrahim/Infrastructure/Slope_stabilisation.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Under_construction_WWTP",
+              "file": "Under_construction_WWTP.zip",
+              "url": "data/Ibrahim/Infrastructure/Under_construction_WWTP.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Infrastructure",
+              "name": "Working_hydropower",
+              "file": "Working_hydropower.zip",
+              "url": "data/Ibrahim/Infrastructure/Working_hydropower.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Capability",
+          "name": "Land_Capability",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Land_Capability",
+              "name": "Land_Capability",
+              "file": "Land_Capability.zip",
+              "url": "data/Ibrahim/Land_Capability/Land_Capability.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Cover_Land_Use",
+          "name": "Land_Cover_Land_Use",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Land_Cover_Land_Use",
+              "name": "LUC_2023",
+              "file": "LUC_2023.zip",
+              "url": "data/Ibrahim/Land_Cover_Land_Use/LUC_2023.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Suitability",
+          "name": "Land_Suitability",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Crops_Land_Suitability",
+              "file": "Irrigated_Crops_Land_Suitability.zip",
+              "url": "data/Ibrahim/Land_Suitability/Irrigated_Crops_Land_Suitability.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Trees_Land_Suitability",
+              "file": "Irrigated_Trees_Land_Suitability.zip",
+              "url": "data/Ibrahim/Land_Suitability/Irrigated_Trees_Land_Suitability.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Annual_Crops",
+              "file": "Rainfed_Annual_Crops.zip",
+              "url": "data/Ibrahim/Land_Suitability/Rainfed_Annual_Crops.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Perennial_Trees_Land_Suitability",
+              "file": "Rainfed_Perennial_Trees_Land_Suitability.zip",
+              "url": "data/Ibrahim/Land_Suitability/Rainfed_Perennial_Trees_Land_Suitability.zip"
+            }
+          ]
+        },
+        {
+          "id": "NBS",
+          "name": "NBS",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "NBS",
+              "name": "NBS_Actions",
+              "file": "NBS_Actions.zip",
+              "url": "data/Ibrahim/NBS/NBS_Actions.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "NBS",
+              "name": "Proposed_Protected_Area",
+              "file": "Proposed_Protected_Area.zip",
+              "url": "data/Ibrahim/NBS/Proposed_Protected_Area.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "NBS",
+              "name": "Riparian_restoration",
+              "file": "Riparian_restoration.zip",
+              "url": "data/Ibrahim/NBS/Riparian_restoration.zip"
+            }
+          ]
+        },
+        {
+          "id": "Soil",
+          "name": "Soil",
+          "layers": [
+            {
+              "basin": "Ibrahim",
+              "category": "Soil",
+              "name": "Soil_Texture",
+              "file": "Soil_Texture.zip",
+              "url": "data/Ibrahim/Soil/Soil_Texture.zip"
+            },
+            {
+              "basin": "Ibrahim",
+              "category": "Soil",
+              "name": "SoilErosion",
+              "file": "SoilErosion.zip",
+              "url": "data/Ibrahim/Soil/SoilErosion.zip"
+            }
+          ]
+        }
+      ],
+      "pdfs": [
+        {
+          "basin": "Ibrahim",
+          "name": "Map_Infrastructure_Ibrahim",
+          "file": "Map_Infrastructure_Ibrahim.pdf",
+          "url": "data/Ibrahim/pdfs/Map_Infrastructure_Ibrahim.pdf"
+        },
+        {
+          "basin": "Ibrahim",
+          "name": "Map_NBS_Ibrahim",
+          "file": "Map_NBS_Ibrahim.pdf",
+          "url": "data/Ibrahim/pdfs/Map_NBS_Ibrahim.pdf"
+        }
+      ]
+    },
+    {
+      "id": "Litani",
+      "name": "Litani",
+      "categories": [
+        {
+          "id": "Accesibilitty",
+          "name": "Accesibilitty",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Accesibilitty",
+              "name": "Roads",
+              "file": "Roads.zip",
+              "url": "data/Litani/Accesibilitty/Roads.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecology",
+          "name": "Ecology",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Ecology",
+              "name": "Ecological_Sensitivity_Index",
+              "file": "Ecological_Sensitivity_Index.zip",
+              "url": "data/Litani/Ecology/Ecological_Sensitivity_Index.zip"
+            }
+          ]
+        },
+        {
+          "id": "Ecosystem",
+          "name": "Ecosystem",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Ecosystem",
+              "name": "Protected_Area",
+              "file": "Protected_Area.zip",
+              "url": "data/Litani/Ecosystem/Protected_Area.zip"
+            }
+          ]
+        },
+        {
+          "id": "Hydrology",
+          "name": "Hydrology",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Hydrology",
+              "name": "Litani_Basin",
+              "file": "Litani_Basin.zip",
+              "url": "data/Litani/Hydrology/Litani_Basin.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Hydrology",
+              "name": "Qaraoun_Lake",
+              "file": "Qaraoun_Lake.zip",
+              "url": "data/Litani/Hydrology/Qaraoun_Lake.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Hydrology",
+              "name": "River",
+              "file": "River.zip",
+              "url": "data/Litani/Hydrology/River.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Hydrology",
+              "name": "Springs",
+              "file": "Springs.zip",
+              "url": "data/Litani/Hydrology/Springs.zip"
+            }
+          ]
+        },
+        {
+          "id": "Infrastructure",
+          "name": "Infrastructure",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Climate_Smart_Aquaculture_and_Aquaponics_Development",
+              "file": "Climate_Smart_Aquaculture_and_Aquaponics_Development.zip",
+              "url": "data/Litani/Infrastructure/Climate_Smart_Aquaculture_and_Aquaponics_Development.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Hill_Lakes",
+              "file": "Hill_Lakes.zip",
+              "url": "data/Litani/Infrastructure/Hill_Lakes.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Inter-basin_water_transfer_systems",
+              "file": "Inter-basin_water_transfer_systems.zip",
+              "url": "data/Litani/Infrastructure/Inter-basin_water_transfer_systems.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Not_working_hydropower",
+              "file": "Not_working_hydropower.zip",
+              "url": "data/Litani/Infrastructure/Not_working_hydropower.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Planned_hydropower",
+              "file": "Planned_hydropower.zip",
+              "url": "data/Litani/Infrastructure/Planned_hydropower.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Proposed_AgriPhotovoltaic",
+              "file": "Proposed_AgriPhotovoltaic.zip",
+              "url": "data/Litani/Infrastructure/Proposed_AgriPhotovoltaic.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Proposed_Solar_photovoltaic",
+              "file": "Proposed_Solar_photovoltaic.zip",
+              "url": "data/Litani/Infrastructure/Proposed_Solar_photovoltaic.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Proposed_WWTP",
+              "file": "Proposed_WWTP.zip",
+              "url": "data/Litani/Infrastructure/Proposed_WWTP.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Rooftop_Harvesting",
+              "file": "Rooftop_Harvesting.zip",
+              "url": "data/Litani/Infrastructure/Rooftop_Harvesting.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Upgrade_irrigation_systems_to_sprinkler_or_drip_irrigation",
+              "file": "Upgrade_irrigation_systems_to_sprinkler_or_drip_irrigation.zip",
+              "url": "data/Litani/Infrastructure/Upgrade_irrigation_systems_to_sprinkler_or_drip_irrigation.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Water_reservoirs_for_fire_fighting",
+              "file": "Water_reservoirs_for_fire_fighting.zip",
+              "url": "data/Litani/Infrastructure/Water_reservoirs_for_fire_fighting.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Wind_Farms",
+              "file": "Wind_Farms.zip",
+              "url": "data/Litani/Infrastructure/Wind_Farms.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "Working_hydropower",
+              "file": "Working_hydropower.zip",
+              "url": "data/Litani/Infrastructure/Working_hydropower.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "WWTP_Operational",
+              "file": "WWTP_Operational.zip",
+              "url": "data/Litani/Infrastructure/WWTP_Operational.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Infrastructure",
+              "name": "WWTP_Under_Construction",
+              "file": "WWTP_Under_Construction.zip",
+              "url": "data/Litani/Infrastructure/WWTP_Under_Construction.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Capability",
+          "name": "Land_Capability",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Land_Capability",
+              "name": "Land_Capability",
+              "file": "Land_Capability.zip",
+              "url": "data/Litani/Land_Capability/Land_Capability.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Cover_Land_Use",
+          "name": "Land_Cover_Land_Use",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Land_Cover_Land_Use",
+              "name": "LUC_2023",
+              "file": "LUC_2023.zip",
+              "url": "data/Litani/Land_Cover_Land_Use/LUC_2023.zip"
+            }
+          ]
+        },
+        {
+          "id": "Land_Suitability",
+          "name": "Land_Suitability",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Crops_Land_Suitability",
+              "file": "Irrigated_Crops_Land_Suitability.zip",
+              "url": "data/Litani/Land_Suitability/Irrigated_Crops_Land_Suitability.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Land_Suitability",
+              "name": "Irrigated_Trees_Land_Suitability",
+              "file": "Irrigated_Trees_Land_Suitability.zip",
+              "url": "data/Litani/Land_Suitability/Irrigated_Trees_Land_Suitability.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Annual_Crops",
+              "file": "Rainfed_Annual_Crops.zip",
+              "url": "data/Litani/Land_Suitability/Rainfed_Annual_Crops.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Land_Suitability",
+              "name": "Rainfed_Perennial_Trees_Land_Suitability",
+              "file": "Rainfed_Perennial_Trees_Land_Suitability.zip",
+              "url": "data/Litani/Land_Suitability/Rainfed_Perennial_Trees_Land_Suitability.zip"
+            }
+          ]
+        },
+        {
+          "id": "NBS",
+          "name": "NBS",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Check_Dams",
+              "file": "Check_Dams.zip",
+              "url": "data/Litani/NBS/Check_Dams.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Deppression_Ponds",
+              "file": "Deppression_Ponds.zip",
+              "url": "data/Litani/NBS/Deppression_Ponds.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Floodplain reconnection and restoration",
+              "file": "Floodplain reconnection and restoration.zip",
+              "url": "data/Litani/NBS/Floodplain reconnection and restoration.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Groundwater_Artificial_Recharge",
+              "file": "Groundwater_Artificial_Recharge.zip",
+              "url": "data/Litani/NBS/Groundwater_Artificial_Recharge.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Infiltration_basin",
+              "file": "Infiltration_basin.zip",
+              "url": "data/Litani/NBS/Infiltration_basin.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "NBS_Interventions",
+              "file": "NBS_Interventions.zip",
+              "url": "data/Litani/NBS/NBS_Interventions.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Proposed_Protected_Area",
+              "file": "Proposed_Protected_Area.zip",
+              "url": "data/Litani/NBS/Proposed_Protected_Area.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Two_river_stage_channel",
+              "file": "Two_river_stage_channel.zip",
+              "url": "data/Litani/NBS/Two_river_stage_channel.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "NBS",
+              "name": "Wetland_restoration_protection_and_expansion",
+              "file": "Wetland_restoration_protection_and_expansion.zip",
+              "url": "data/Litani/NBS/Wetland_restoration_protection_and_expansion.zip"
+            }
+          ]
+        },
+        {
+          "id": "Soil",
+          "name": "Soil",
+          "layers": [
+            {
+              "basin": "Litani",
+              "category": "Soil",
+              "name": "Soil_Texture",
+              "file": "Soil_Texture.zip",
+              "url": "data/Litani/Soil/Soil_Texture.zip"
+            },
+            {
+              "basin": "Litani",
+              "category": "Soil",
+              "name": "SoilErosion",
+              "file": "SoilErosion.zip",
+              "url": "data/Litani/Soil/SoilErosion.zip"
+            }
+          ]
+        }
+      ],
+      "pdfs": [
+        {
+          "basin": "Litani",
+          "name": "Map_Infrastructure_Litani",
+          "file": "Map_Infrastructure_Litani.pdf",
+          "url": "data/Litani/pdfs/Map_Infrastructure_Litani.pdf"
+        },
+        {
+          "basin": "Litani",
+          "name": "Map_NBS_Litani",
+          "file": "Map_NBS_Litani.pdf",
+          "url": "data/Litani/pdfs/Map_NBS_Litani.pdf"
+        }
+      ]
+    }
+  ]
+}
